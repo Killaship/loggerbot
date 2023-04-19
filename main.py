@@ -6,8 +6,12 @@ import discord
 from discord.ext import commands, tasks
 
 import time
+import os
 
 owners = [401849772157435905, 876488885419520020] # Owner account IDs
+
+with open('token.txt', 'r') as f:
+    bottoken = f.readline().strip()
 
 intents = discord.Intents.default()
 intents.members = True
